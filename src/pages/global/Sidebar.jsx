@@ -9,7 +9,7 @@ import { SiAtom } from 'react-icons/si';
 import NaturePeopleOutlinedIcon from '@mui/icons-material/NaturePeopleOutlined';
 import { GiSkills } from 'react-icons/gi';
 import HandymanOutlinedIcon from '@mui/icons-material/HandymanOutlined';
-import { TbCertificate } from 'react-icons/tb';
+import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 // Components icon
 import ExtensionOutlinedIcon from '@mui/icons-material/ExtensionOutlined';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
@@ -18,15 +18,23 @@ import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
 import { profileImage } from '../../assets/images/images';
 import DownloadForOfflineOutlinedIcon from '@mui/icons-material/DownloadForOfflineOutlined';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
+import WorkspacePremiumOutlinedIcon from '@mui/icons-material/WorkspacePremiumOutlined';
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     return (
+        // MenuItem from react-pro-sidebar
+        // https://www.npmjs.com/package/react-pro-sidebar
         <MenuItem
+            /*
+                vefify if useStated selected is equal to the title
+                if the condition is true is gonna as selected item.
+           */
             active={selected === title}
             style={{
                 color: colors.greenAccent[600],
+                fontSize: 5,
             }}
             onClick={() => setSelected(title)}
             icon={icon}
@@ -52,11 +60,15 @@ const Sidebar = () => {
                 '& .pro-icon-wrapper': {
                     backgroundColor: 'transparent !important',
                 },
+                '& .pro-icon': {
+                    fontSize: '1.5rem',
+                },
                 '& .pro-inner-item': {
-                    padding: '5px 35px 5px 20px !important',
+                    padding: '5px 8px 5px 5px !important',
                 },
                 '& .pro-inner-item: hover': {
                     color: '#868dfb !important',
+                    backgroundColor: `${colors.greenAccent[800]}`,
                 },
                 '& .pro-menu-item.active': {
                     color: '#6870fa !important',
@@ -85,7 +97,7 @@ const Sidebar = () => {
                                     variant="h3"
                                     color={colors.grey[100]}
                                 >
-                                    Portafolio
+                                    💼 Portafolio
                                 </Typography>
                                 <IconButton
                                     onClick={() => setIsCollapsed(!isCollapsed)}
@@ -147,25 +159,25 @@ const Sidebar = () => {
                             color={colors.grey[300]}
                             sx={{ m: '15px 0 5px 20px' }}
                         >
-                            Personal Information
+                            About me
                         </Typography>
                         <Item
-                            title="Manage Team"
-                            to="/team"
-                            icon={<NaturePeopleOutlinedIcon />}
+                            title="Soft Skills"
+                            to="/softSkills"
+                            icon={<GiSkills />}
                             selected={selected}
                             setSelected={setSelected}
                         />
                         <Item
-                            title="Contacts Information"
-                            to="/contacts"
-                            icon={<NaturePeopleOutlinedIcon />}
+                            title="Tecnologies"
+                            to="/tecnologies"
+                            icon={<HandymanOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
                         <Item
-                            title="Invoices Balances"
-                            to="/invoices"
+                            title="Hobbies"
+                            to="/hobbies"
                             icon={<NaturePeopleOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
@@ -179,14 +191,14 @@ const Sidebar = () => {
                         </Typography>
                         <Item
                             title="Web Sites"
-                            to="/form"
+                            to="/projects"
                             icon={<LanguageOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
                         <Item
                             title="Components"
-                            to="/calendar"
+                            to="/components"
                             icon={<SiAtom />}
                             selected={selected}
                             setSelected={setSelected}
@@ -200,7 +212,7 @@ const Sidebar = () => {
                         </Typography>
                         <Item
                             title="Send mail"
-                            to="/bar"
+                            to="/contactForm"
                             icon={<EmailOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
@@ -219,18 +231,25 @@ const Sidebar = () => {
                             selected={selected}
                             setSelected={setSelected}
                         />
-                        Certificates
+                        Certifications
                         <Item
-                            title="University"
-                            to="/calendar"
-                            icon={<CalendarMonthOutlinedIcon />}
+                            title="Engineering Path"
+                            to="/engineeringPath"
+                            icon={<SchoolOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
                         <Item
-                            title="Resume"
-                            to="/resume"
-                            icon={<DownloadForOfflineOutlinedIcon />}
+                            title="Training"
+                            to="/training"
+                            icon={<WorkspacePremiumOutlinedIcon />}
+                            selected={selected}
+                            setSelected={setSelected}
+                        />
+                        <Item
+                            title="Others"
+                            to="/othersCertificates"
+                            icon={<WorkspacePremiumOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
