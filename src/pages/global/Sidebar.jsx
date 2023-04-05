@@ -112,6 +112,12 @@ const Sidebar = () => {
                                         cursor: 'pointer',
                                         borderRadius: '50%',
                                         objectFit: 'cover',
+                                        border: `1px solid  ${colors.blueAccent[700]}`,
+                                        borderStyle: 'dotted dashed solid double',
+                                        padding: '8px',
+                                        animationName: 'borderSnake',
+
+                                        
                                     }}
                                 />
                             </Box>
