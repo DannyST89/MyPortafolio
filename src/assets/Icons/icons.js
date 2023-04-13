@@ -1,2 +1,10 @@
-export { default as emotionalIntelligence } from "./emotionalIntelligence.png";
-export { default as persuasionSkill } from "./persuasionSkill.png";
+export { default as teamWork } from "./teamWork.png";
+export { default as communication } from "./communication.png";
+export { default as adaptability } from "./adaptability.png";
+export { default as empathy } from "./empathy.png";
+export { default as creative } from "./creative.png";
+export { default as lifeLongLearning } from "./lifeLongLearning.png";
+export { default as problemSolving } from "./problemSolving.png";
+export { default as timeManagement } from "./timeManagement.png";
+export { default as stressManagement } from "./stressManagement.png";
+export { default as openCriticism } from "./openCriticism.png";
