@@ -16,19 +16,7 @@ const Topbar = () => {
     const colorMode = useContext(ColorModeContext);
 
     return (
-        <Box display="flex" justifyContent="space-between" p={2}>
-            {/* SEARCH BAR */}
-            <Box
-                display="flex"
-                backgroundColor={colors.primary[400]}
-                borderRadius="3px"
-            >
-                <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
-                <IconButton type="button" sx={{ p: 1 }}>
-                    <SearchOutlinedIcon />
-                </IconButton>
-            </Box>
-
+        <Box display="flex" justifyContent="right" p={2}>
             {/* ICONS */}
             <Box display="flex">
                 {/* click to call function located in theme file */}
@@ -40,16 +28,19 @@ const Topbar = () => {
                         <DarkModeOutlinedIcon />
                     )}
                 </IconButton>
-                <IconButton>
+                <IconButton href="https://www.linkedin.com/in/dannyst89">
                     <AiFillLinkedin />
                 </IconButton>
-                <IconButton>
+                <IconButton href="https://github.com/DannyST89">
                     <BsGithub />
                 </IconButton>
-                <IconButton>
+                <IconButton href="https://www.facebook.com/profile.php?id=100079033674689&mibextid=ZbWKwL">
                     <FacebookOutlinedIcon />
                 </IconButton>
-                <IconButton sx={{ mr: '40px' }}>
+                <IconButton
+                    sx={{ mr: '40px' }}
+                    href="https://instagram.com/gallito2401?igshid=MGNiNDI5ZTU="
+                >
                     <AiFillInstagram />
                 </IconButton>
             </Box>
