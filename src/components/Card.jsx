@@ -12,6 +12,8 @@ const Card = ({
   imgHeigth,
   imgWidth,
   descriptionFormat,
+  paddingL,
+  paddinR,
 }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -48,12 +50,16 @@ const Card = ({
           width={imgHeigth}
           height={imgWidth}
           paddingBottom={"1rem"}
+          paddingLeft={paddingL}
+          paddingRight={paddinR}
         />
         <Typography
           sx={{
             display: "flex",
             justifyContent: "center",
             alignContent: "center",
+            paddingLeft: paddingL,
+            paddingRight: paddinR,
           }}
           variant={titleFormat}
         >
