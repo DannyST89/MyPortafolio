@@ -4,7 +4,7 @@ import skills from "../../data/skills";
 
 const SoftSkills = () => {
   return (
-    <Grid container>
+    <Grid container paddingLeft={5} paddingRight={5}>
       {skills.map((skill) => (
         <Grid
           key={skill.id}
@@ -24,6 +24,8 @@ const SoftSkills = () => {
             margin={1}
             imgHeight={"5rem"}
             imgWidth={"5rem"}
+            paddingL={"1rem"}
+            paddinR={"1rem"}
           />
         </Grid>
       ))}
